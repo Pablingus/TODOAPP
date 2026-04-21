@@ -1,0 +1,214 @@
+:root {
+  --bg-main: #0f1220;
+  --bg-card: rgba(26, 29, 46, 0.85);
+  --accent: #5ac8fa;
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1a1f3a, #0b0e1a);
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;     /* centra horizontal */
+  align-items: flex-start;     /* lo sube */
+  
+  padding-top: 80px;           /* ajusta altura */
+}
+
+/* ROOT DE REACT */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;     /* evita que se vaya a la derecha */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.app {
+  width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* centra contenido interno */
+}
+
+/* TÍTULO */
+h1 {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* CONTADOR */
+.counter {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* INPUT */
+.input-group {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #2a2d44;
+  color: white;
+  outline: none;
+}
+
+.input-group button {
+  width: 50px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* FILTROS */
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: #2a2d44;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters button:hover {
+  background: #3a3d5c;
+}
+
+/* LISTA */
+.task-list {
+  width: 100%;
+}
+
+/* ITEM */
+.task-item {
+  background: #2a2d44;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+
+  transition: transform 0.2s;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+/* TEXTO */
+.task-item span {
+  cursor: pointer;
+}
+
+/* COMPLETADO */
+.completed {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* BOTÓN ELIMINAR */
+.task-item button {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+/* MENSAJE VACÍO */
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+}
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+}
+
+.app {
+  margin: 0 auto !important;
+}
+.filters button.active {
+  background: var(--accent);
+}
+.task-item {
+  transition: all 0.2s ease;
+}
+.completed {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+.task-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fecha {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* importante */
+  gap: 10px;
+}
+
+/* CONTENIDO DE TEXTO */
+.task-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* permite que ocupe espacio */
+}
+
+/* TEXTO */
+.task-content span {
+  word-break: break-word;      /* rompe palabras largas */
+  overflow-wrap: break-word;   /* alternativa moderna */
+}
